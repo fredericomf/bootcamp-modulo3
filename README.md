@@ -103,6 +103,42 @@ Para saber mais: https://mongoosejs.com
 yarn add mongoose
 ```
 
+## JSON WEB TOKEN
+
+Para criar os tokens de autenticação e validar.
+
+Para saber mais: https://www.npmjs.com/package/jsonwebtoken
+
+```bash
+yarn add jsonwebtoken
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado no MODEL USER_
+
+## REQUIRE DIR
+
+Para retornar todos os arquivos e subpastas de um diretório requerido.
+
+Para saber mais: https://www.npmjs.com/package/require-dir
+
+```bash
+yarn add require-dir
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado no index.js da pasta CONTROLLERS_
+
+## MONGOOSE PAGINATE
+
+Para auxiliar na implementação de paginação de resultados
+
+Para saber mais: https://github.com/edwardhotchkiss/mongoose-paginate
+
+```bash
+yarn add mongoose-paginate
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado no model de anúncios "Ad" na pasta "MODELS". Também é configurado no CONTROLLER "AdController" const ads = await Ad.paginate() [antes era Ad.find()]_
+
 # PLUGINS
 
 # Extenções VSCODE utilizadas
