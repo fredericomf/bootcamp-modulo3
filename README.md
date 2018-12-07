@@ -139,6 +139,78 @@ yarn add mongoose-paginate
 
 _NOTA: Um exemplo de uso pode ser encontrado no model de anúncios "Ad" na pasta "MODELS". Também é configurado no CONTROLLER "AdController" const ads = await Ad.paginate() [antes era Ad.find()]_
 
+## NODEMAILER
+
+É um módulo para o Node.js para facilitar o envio de e-mails
+
+Para saber mais: https://nodemailer.com/about/
+
+```bash
+yarn add nodemailer
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado '/src/app/services/Mail.js'_
+
+## NODEMAILER EXPRESS HANDLEBARS
+
+É um plugin para o nodemailer que utiliza o mecanismo HANDLEBARS para formatar e-mails HTML
+
+Para saber mais: https://www.npmjs.com/package/nodemailer-express-handlebars
+
+```bash
+yarn add nodemailer-express-handlebars
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado '/src/app/services/Mail.js'_
+
+## EXPRESS HANDLEBARS
+
+É um mecanismo de renderização similar ao Nunjucks
+
+Para saber mais: https://www.npmjs.com/package/express-handlebars
+
+```bash
+yarn add express-handlebars
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado '/src/app/services/Mail.js'_
+
+## KUE
+
+Funcionalidade de fila com back usando REDIS (vide abaixo a instalação do REDIS)
+
+Para saber mais: https://automattic.github.io/kue/
+
+```bash
+yarn add kue
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado '/src/app/services/Mail.js'_
+
+## JOI
+
+Para fazer a validação de objetos javascript
+
+Para saber mais: https://www.npmjs.com/package/joi
+
+```bash
+yarn add joi
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado nas classes: '/src/app/validators'_
+
+## EXPRESS VALIDATION
+
+É um middleware que valida o body, params, query, headers e cookier de uma requisição
+
+Para saber mais: https://www.npmjs.com/package/express-validation
+
+```bash
+yarn add express-validation
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado nas classes: '/src/app/validators'_
+
 # PLUGINS
 
 # Extenções VSCODE utilizadas
@@ -202,6 +274,20 @@ sudo docker run --name mongonode -p 27017:27017 -d -t mongo
 ```
 
 _NOTA: o '-p 27017:27017' serve para redirecionar a porta 27017 do docker container para a posta 27017 da nossa máquina. Assim podemos acessar o banco por essa porta_
+
+- Depois de instalado podemos roadar o seguinte comando para ver os servidores que estão rodando:
+
+```bash
+sudo docker ps
+```
+
+## REDIS
+
+Banco de dados NoSQL (considerado um dos mais performáticos do mercado atual 2018). Este banco será utilizado para o tratamento de FILAS do nosso sistema (e-mail a princípio)
+
+```bash
+sudo docker run --name noderedis -p 6379:6379 -d -t redis:alpine
+```
 
 - Depois de instalado podemos roadar o seguinte comando para ver os servidores que estão rodando:
 
