@@ -211,6 +211,54 @@ yarn add express-validation
 
 _NOTA: Um exemplo de uso pode ser encontrado nas classes: '/src/app/validators'_
 
+## YOUCH
+
+É um formatador de erros
+
+Para saber mais: https://www.npmjs.com/package/youch
+
+```bash
+yarn add youch
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado em: '/src/server.js'_
+
+## EXPRESS ASYNC HANDLER
+
+Para conseguirmos enviar os erros que acontecem dentro das PROMISSES para o nosso exception handler
+
+Para saber mais: https://www.npmjs.com/package/express-async-handler
+
+```bash
+yarn add express-async-handler
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado em: '/src/routes.js'_
+
+## SENTRY
+
+Rastreador de erros em tempo real (para produção)
+
+Para saber mais: https://www.sentry.io
+
+```bash
+yarn add @sentry/node
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado em: '/src/server.js' ou '/src/app/services/Queue.js'_
+
+## DOTENV
+
+Para carregar variáveis de ambiente
+
+Para saber mais: https://www.npmjs.com/package/dotenv
+
+```bash
+yarn add dotenv
+```
+
+_NOTA: Um exemplo de uso pode ser encontrado em: '/src/server.js'_
+
 # PLUGINS
 
 # Extenções VSCODE utilizadas
