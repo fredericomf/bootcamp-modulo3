@@ -31,12 +31,15 @@ routes.post(
 )
 routes.put(
   '/ads/:id',
-  validate(validators.Ad),
+  /* validate(validators.Ad), */
   handle(controllers.AdController.update)
 ) // NOTA_ESTUDO: Método PUT (Rest) é utilizado quando queremos indicar que faremos uma atualização de dados
 routes.delete('/ads/:id', handle(controllers.AdController.destroy))
 
+routes.put('/ad/purchased/:id', handle(controllers.AdController.updateStock))
+
 // Purchases
+routes.get('/purchases', handle(controllers.PurchaseController.index))
 routes.post(
   '/purchase',
   validate(validators.Purchase),

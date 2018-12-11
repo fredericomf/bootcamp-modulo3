@@ -20,6 +20,10 @@ const Ad = new mongoose.Schema({
     type: Number,
     required: true
   },
+  stock: {
+    type: Number,
+    deafult: 1
+  },
   createdAt: {
     type: Date,
     default: Date.now

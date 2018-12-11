@@ -21,6 +21,9 @@ class AdController {
       filters.title = new RegExp(req.query.title, 'i') // NOTE_ESTUDO: O 'i' serve para 'CASE INSENSITIVE'
     }
 
+    filters.stock = {}
+    filters.stock.$gte = 1
+
     const ads = await Ad.paginate(filters, {
       page: req.query.page || 1,
       limit: 20,
@@ -57,6 +60,26 @@ class AdController {
     await Ad.findByIdAndDelete(req.params.id)
 
     res.send()
+  }
+
+  async updateStock (req, res) {
+    let ad = await Ad.findById(req.params.id)
+
+    let newStock = ad.stock - (req.body.quantity || 1)
+
+    if (newStock < 0) {
+      newStock = 0
+    }
+
+    ad = await Ad.findByIdAndUpdate(
+      req.params.id,
+      { $set: { stock: newStock } },
+      {
+        new: true
+      }
+    )
+
+    return res.json(ad)
   }
 }
 
