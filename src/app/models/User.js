@@ -40,6 +40,8 @@ UserSchema.methods = {
 // NOTA_ESTUDO: Implementando métodos estáticos
 UserSchema.statics = {
   generateToken ({ id }) {
+
+    // NOTA_ESTUDO: Se você não passar um OBJECT para sign ele dá esse erro: Error: invalid expiresIn option for string payload.
     return jwt.sign({ id }, authConfig.secret, {
       expiresIn: authConfig.ttl
     })
